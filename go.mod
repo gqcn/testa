@@ -1,2 +1,3 @@
-module github.com/johngcn/testa
+module github.com/gqcn/testa
 
+go 1.14
