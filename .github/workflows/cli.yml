@@ -25,8 +25,9 @@ jobs:
           git config --global user.name "TagRobot"
           for file in `find contrib -name go.mod`; do
               tag=$(dirname $file)/$GITHUB_REF_NAME
-              echo $tag
-              echo 1
+              echo "auto creating tag $tag"
+              git tag $tag
+              git push origin $tag
           done
 
 
