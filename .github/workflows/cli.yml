@@ -23,7 +23,7 @@ jobs:
           script: |
             for file in `find contrib -name go.mod`; do
                 prefix=$(dirname $file)
-                echo "refs/tags/${prefix}/${github.ref}"
+                echo $prefix
             done
 
 
