@@ -24,8 +24,8 @@ jobs:
           git config --global user.email "tagrobot@goframe.org"
           git config --global user.name "TagRobot"
           for file in `find contrib -name go.mod`; do
-              prefix=$(dirname $file)
-              echo "$prefix/$GITHUB_REF_NAME"
+              tag="$(dirname $file)/$GITHUB_REF_NAME"
+              echo $tagName
           done
 
 
