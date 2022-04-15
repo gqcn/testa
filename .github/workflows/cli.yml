@@ -25,7 +25,7 @@ jobs:
           git config --global user.name "TagRobot"
           for file in `find contrib -name go.mod`; do
               prefix=$(dirname $file)
-              env
+              echo "{$prefix}/{$GITHUB_REF_NAME}"
           done
 
 
