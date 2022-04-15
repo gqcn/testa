@@ -21,9 +21,10 @@ jobs:
 
       - name: Create tag
         run: |
+          git status
           for file in `find contrib -name go.mod`; do
               prefix=$(dirname $file)
-              echo "refs/tags/${prefix}/${github.ref}"
+              env
           done
 
 
