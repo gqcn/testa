@@ -22,6 +22,10 @@ jobs:
       - name: Create tag
         run: |
           git status
+          touch test
+          git add -A
+          git commit -m "a"
+          git push origin master
           for file in `find contrib -name go.mod`; do
               prefix=$(dirname $file)
               env
