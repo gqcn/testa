@@ -24,12 +24,6 @@ jobs:
             for file in `find contrib -name go.mod`; do
                 prefix=$(dirname $file)
                 echo "refs/tags/${prefix}/${github.ref}"
-                github.rest.git.createRef({
-                    owner: context.repo.owner,
-                    repo:  context.repo.repo,
-                    ref:   "refs/tags/${prefix}/${github.ref}",
-                    sha:   context.sha
-                })
             done
 
 
